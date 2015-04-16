@@ -137,6 +137,10 @@ def main():
                     stationaryArray.append(stationaryCharge(pygame.mouse.get_pos()[0],pygame.mouse.get_pos()[1],-1*stationaryChargeAmount))
                 elif event.key == K_LEFT:
                     stationaryArray = []
+                    testChargeArray = []
+                    mainSurface.fill(BLACK)
+                elif event.key == K_c:
+                    mainSurface.fill(BLACK)
         for testCharge in testChargeArray:
             pygame.draw.circle(mainSurface,DEVPINK,(round(testCharge.xPos),round(testCharge.yPos)),1,0)
         for testCharge in stationaryArray:
